@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quote.css" />
+    <title>Quote</title>
+</head>
+<body>
+    <div class="container">
+      <header>
+        <h1>Random Quote Generator</h1>
+      </header>
+      <main>
+        <section id="quote-section" class="quote-section">
+          <p id="quote">Click the button to get a quote!</p>
+          <p id="author"></p>
+        </section>
+    
+        <section id="preferences">
+          <h2>Personalize Your Quotes</h2>
+          <label for="categories">Choose a category:</label>
+          <select id="categories">
+            <option value="freedom">Freedom</option> 
+            <option value="education">Education</option> 
+            <option value="business">Business</option>
+            <option value="technology">Technology</option>
+            <option value="love">Love</option>
+            <option value="wisdom">Wisdom</option>
+          </select>
+          <button id="generate-btn">Generate Quote</button>
+          <button id="share-btn">Share on Facebook</button>
+        </section>
+      </main>
+      <footer>
+        <p>Made with ❤️ using HTML, CSS, and JS</p>
+      </footer>
+    </div>
+    <script src="quote.js"></script>
+  </body>
+</html>
