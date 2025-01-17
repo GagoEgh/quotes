@@ -1,3 +1,4 @@
+// HTML Elements
 const quote_section = document.getElementById("quote-section");
 const quoteElement = document.getElementById("quote");
 const authorElement = document.getElementById("author");
@@ -5,9 +6,10 @@ const generateBtn = document.getElementById("generate-btn");
 const categoriesDropdown = document.getElementById("categories");
 const shareBtn = document.getElementById("share-btn");
 
-// Array to track displayed quotes to avoid repetition
+// variables
 let displayedQuotes = [];
 let  quotes = [];
+let isChangeCategory = false;
 
 async function fetchQuotes(category) {
     const url = 'https://api.quotable.io/quotes?tags=';    
@@ -77,16 +79,15 @@ async function generateQuote() {
     displayQuote(filteredQuotes);
 }
 
-// Event listener for the generate button
-generateBtn.addEventListener("click", generateQuote);
-shareBtn.addEventListener("click", shareQuote);
-
-let isChangeCategory = false;
+// Generate a quote when the category changes.
 function changeCategory(){
     isChangeCategory = true;
     generateQuote();
-    return isChangeCategory
 }
+
+// Event listener for the generate button
+generateBtn.addEventListener("click", generateQuote);
+shareBtn.addEventListener("click", shareQuote);
 categoriesDropdown.addEventListener('change',changeCategory);
 
 // Load preferences on page load
