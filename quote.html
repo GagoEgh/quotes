@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="quote.css" />
-    <title>Quote</title>
-</head>
-<body>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="quote.css" />
+      <title>Quote</title>
+  </head>
+  <body>
     <div class="container">
+      <div id="success" class="success">
+        <p>Success:</p>
+        <p>Quote added to DB</p>
+      </div>
+      <div id="error"  class="error">
+        <p>Error adding to DB:</p>
+        <p>Something went wrong</p>
+      </div>
       <header>
         <h1>Random Quote Generator</h1>
       </header>
       <main>
-        <section id="quote-section" class="quote-section">
+        <section id="quote-section" class="quote-section quote">
           <p id="quote">Click the button to get a quote!</p>
           <p id="author"></p>
         </section>
@@ -27,10 +35,19 @@
             <option value="technology">Technology</option>
             <option value="love">Love</option>
             <option value="wisdom">Wisdom</option>
+            <option value="my">My</option>
           </select>
           <button id="generate-btn">Generate Quote</button>
           <button id="share-btn">Share on Facebook</button>
         </section>
+        <section class="quote">
+          <h2>Your Quote</h2>
+          <div class="contribute">
+            <textarea id="quote-contribute" ></textarea>
+            <button id="btn-contribute">Contribute Quote</button>
+          </div>
+        </section>
+        
       </main>
       <footer>
         <p>Made with <span class="heart">&#10084;</span> using HTML, CSS, and JS</p>
