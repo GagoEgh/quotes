@@ -101,14 +101,11 @@ async function changeCategory(){
         quotes = await getQuote();
         const filteredQuotes = quotes.filter(quote => !quotes.includes(quote._id));
         displayQuote(filteredQuotes);
-
     }
-    
 }
 
 // contribute our quote
 function contributeQuote(){
-    const quotes = []
     ensureDbReady();
     const text = quote_contribute.value;
     const quote ={

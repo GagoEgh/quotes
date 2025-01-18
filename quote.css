@@ -16,7 +16,6 @@ body {
     z-index: 999;
 }
 
-
 .success, .error{
     position: absolute;
     top: 80px;
